@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "970085869739",
+    "project_id": "kusuk-f50f6",
+    "storage_bucket": "kusuk-f50f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970085869739:android:c218c6d90dc100d875afee",
+        "android_client_info": {
+          "package_name": "com.korea.kusuk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970085869739-oob34n48l04hr1q6uk0u5d9j7fe5t098.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.korea.kusuk",
+            "certificate_hash": "577d493e85b1d372535acb75564176630e16a49b"
+          }
+        },
+        {
+          "client_id": "970085869739-s45sirehdb4g26ev65uviu98avbfdq7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN_24H-X0X2ab2KkeIWtTyn3KZNbSD-9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970085869739-s45sirehdb4g26ev65uviu98avbfdq7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
