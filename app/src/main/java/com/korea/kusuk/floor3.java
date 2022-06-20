@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,11 +21,10 @@ import java.util.Date;
 
 public class floor3 extends AppCompatActivity {
 
-
-
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference database = mRootRef.child("reservation").child("3floor");
-
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    String uid = user.getUid();
     private Button table301, table302, table303, table304, table305, table306, table307;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table301").child("finishtime").setValue(getTime);
+                        database.child("table301").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -90,6 +92,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table302").child("finishtime").setValue(getTime);
+                        database.child("table302").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -123,6 +126,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table303").child("finishtime").setValue(getTime);
+                        database.child("table303").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -155,6 +159,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table304").child("finishtime").setValue(getTime);
+                        database.child("table304").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -187,6 +192,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table305").child("finishtime").setValue(getTime);
+                        database.child("table305").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -220,6 +226,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table306").child("finishtime").setValue(getTime);
+                        database.child("table306").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -252,6 +259,7 @@ public class floor3 extends AppCompatActivity {
                         String getTime = dateFormat.format(date);
 
                         database.child("table307").child("finishtime").setValue(getTime);
+                        database.child("table307").child("ID").setValue(uid);
                     }
                 });
                 ad.setNegativeButton("취소", new DialogInterface.OnClickListener() {
