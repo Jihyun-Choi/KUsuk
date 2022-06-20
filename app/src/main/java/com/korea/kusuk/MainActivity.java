@@ -40,12 +40,11 @@ public class MainActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
         //listview.setOnItemClickListener(listener);
 
-        adapter.addItem("제목1", "내용1");  //(제목 부분, 내용)
-        adapter.addItem("제목1", "내용1");
-        adapter.addItem("제목1", "내용1");
-        adapter.addItem("제목1", "내용1");
-        adapter.addItem("제목1", "내용1");
-        adapter.addItem("제목1", "내용1");
+        adapter.addItem("제목1", "날짜", "내용1");  //(제목 부분, 내용)
+        adapter.addItem("제목1", "날짜", "내용1");
+        adapter.addItem("제목1", "날짜", "내용1");
+        adapter.addItem("제목1", "날짜", "내용1");
+        adapter.addItem("제목1", "날짜", "내용1");
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림.
 

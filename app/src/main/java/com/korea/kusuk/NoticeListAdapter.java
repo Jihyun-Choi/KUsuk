@@ -13,6 +13,7 @@ import java.util.List;
 
 public class NoticeListAdapter extends BaseAdapter {
     private TextView titleTextView;
+    private TextView dateTextView;
     private TextView contentTextView;
 
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
@@ -20,7 +21,6 @@ public class NoticeListAdapter extends BaseAdapter {
 
     // ListViewAdapter의 생성자
     public NoticeListAdapter() {
-
     }
 
     // Adapter에 사용되는 데이터의 개수를 리턴
@@ -43,12 +43,14 @@ public class NoticeListAdapter extends BaseAdapter {
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
         titleTextView = (TextView) convertView.findViewById(R.id.title);
+        dateTextView = (TextView) convertView.findViewById(R.id.date);
         contentTextView = (TextView) convertView.findViewById(R.id.content);
 
         ListViewItem listViewItem = listViewItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
         titleTextView.setText(listViewItem.getTitle());
+        dateTextView.setText(listViewItem.getDate());
         contentTextView.setText(listViewItem.getContent());
 
         return convertView;
@@ -67,10 +69,11 @@ public class NoticeListAdapter extends BaseAdapter {
     }
 
     // 아이템 데이터 추가를 위한 함수.
-    public void addItem(String title, String content) {
+    public void addItem(String title, String date, String content) {
         ListViewItem item = new ListViewItem();
 
         item.setTitle(title);
+        item.setDate(date);
         item.setContent(content);
 
         listViewItemList.add(item);
