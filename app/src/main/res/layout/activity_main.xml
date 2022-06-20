@@ -69,9 +69,10 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="4층 팀플존"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="4층 팀플존"
+                />
         </LinearLayout>
 
         <View
