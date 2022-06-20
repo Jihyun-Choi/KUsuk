@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private ListView listview ;
     private NoticeListAdapter adapter;
+    Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +48,14 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem("제목1", "내용1");
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림.
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ReservationMain.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

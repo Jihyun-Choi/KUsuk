@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/table">
+
+    <Button
+        android:id="@+id/table404"
+
+        android:layout_width="108dp"
+        android:layout_height="63dp"
+        android:text="404"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:id="@+id/table401"
+        android:layout_width="138dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center"
+        android:rotation="-34"
+        android:rotationX="-4"
+        android:rotationY="-21"
+        android:text="401"
+        android:layout_marginRight="40dp"
+        />
+
+    <Button
+        android:id="@+id/table405"
+        android:layout_width="104dp"
+        android:layout_height="109dp"
+        android:text="405"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp"
+        />
+
+    <Button
+        android:id="@+id/table402"
+        android:layout_width="138dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center"
+        android:rotation="-34"
+        android:rotationX="-4"
+        android:rotationY="-21"
+        android:text="402"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/table406"
+        android:layout_width="104dp"
+        android:layout_height="109dp"
+        android:text="406"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp" />
+
+    <Button
+        android:id="@+id/table403"
+        android:layout_width="138dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center"
+        android:rotation="-34"
+        android:rotationX="-4"
+        android:rotationY="-21"
+        android:text="403"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/table407"
+        android:layout_width="108dp"
+        android:layout_height="63dp"
+        android:layout_gravity="right"
+        android:text="407"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="-30dp"/>
+</LinearLayout>
