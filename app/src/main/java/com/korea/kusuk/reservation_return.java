@@ -30,7 +30,7 @@ public class reservation_return extends AppCompatActivity {
         setContentView(R.layout.reservation_return);
 
 
-        Button returnbtn = (Button) findViewById(R.id.returnbtn);
+        Button returnbtn = findViewById(R.id.returnbtn);
         returnbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

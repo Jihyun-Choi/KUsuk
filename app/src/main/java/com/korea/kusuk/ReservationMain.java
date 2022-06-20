@@ -32,25 +32,9 @@ public class ReservationMain extends AppCompatActivity {
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference conditionRef = mRootRef.child("3f floor");
 
-    private Spinner spinner2;
-    ArrayList<String> arrayList;
-    ArrayAdapter<String> arrayAdapter;
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ArrayList arrayList = new ArrayList<>();
-        arrayList.add("3층");
-        arrayList.add("4층");
-
-        spinner2 = (Spinner)findViewById(R.id.spinner2);
-        arrayAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, arrayList);
-        spinner2.setAdapter(arrayAdapter);
-
-
-
+        setContentView(R.layout.reservationmain);
 
         Button developer_info_btn = (Button) findViewById(R.id.floor3);
         developer_info_btn.setOnClickListener(new View.OnClickListener(){

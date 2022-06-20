@@ -22,10 +22,6 @@ public class Reservation extends AppCompatActivity {
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference conditionRef = mRootRef.child("3f floor");
 
-    private Spinner spinner2;
-    ArrayList<String> arrayList;
-    ArrayAdapter<String> arrayAdapter;
-
 
 
     protected void onCreate(Bundle savedInstanceState) {

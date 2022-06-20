@@ -1,76 +1,171 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    android:background="@drawable/table">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="80dp"
+        android:src="@drawable/kusuklogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
 
-    <Button
-        android:id="@+id/table404"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="K U S U K"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.00999999" />
 
-        android:layout_width="108dp"
-        android:layout_height="63dp"
-        android:text="404"
-        android:layout_gravity="right"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="80dp"/>
 
-    <Button
-        android:id="@+id/table401"
-        android:layout_width="138dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center"
-        android:rotation="-34"
-        android:rotationX="-4"
-        android:rotationY="-21"
-        android:text="401"
-        android:layout_marginRight="40dp"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:background="#E1E1E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.463">
 
-    <Button
-        android:id="@+id/table405"
-        android:layout_width="104dp"
-        android:layout_height="109dp"
-        android:text="405"
-        android:layout_gravity="right"
-        android:layout_marginRight="40dp"
-        />
+        <Button
+            android:id="@+id/table402"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:text="402"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/table402"
-        android:layout_width="138dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center"
-        android:rotation="-34"
-        android:rotationX="-4"
-        android:rotationY="-21"
-        android:text="402"
-        android:layout_marginRight="40dp"/>
+        <Button
+            android:id="@+id/table401"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:text="401"
+            app:layout_constraintBottom_toTopOf="@+id/table402"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/table406"
-        android:layout_width="104dp"
-        android:layout_height="109dp"
-        android:text="406"
-        android:layout_gravity="right"
-        android:layout_marginRight="40dp" />
+        <Button
+            android:id="@+id/table404"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:text="404"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/table403" />
 
-    <Button
-        android:id="@+id/table403"
-        android:layout_width="138dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center"
-        android:rotation="-34"
-        android:rotationX="-4"
-        android:rotationY="-21"
-        android:text="403"
-        android:layout_marginRight="40dp"/>
+        <Button
+            android:id="@+id/table403"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:text="403"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
-    <Button
-        android:id="@+id/table407"
-        android:layout_width="108dp"
-        android:layout_height="63dp"
-        android:layout_gravity="right"
-        android:text="407"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="-30dp"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/table406"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:rotation="130"
+            android:text="406"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/table405"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:rotation="130"
+            android:text="405"
+            app:layout_constraintBottom_toTopOf="@+id/table306"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/table407"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:rotation="130"
+            android:text="407"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/table406" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50dp"
+            android:layout_height="400dp"
+            android:background="#FFFFFF"
+            android:text="o"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="59dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="186dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="350dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="150dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 팀플존은 최대 2시간 이용이 가능합니다."
+        android:textColor="#7D0019"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

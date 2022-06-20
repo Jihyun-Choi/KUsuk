@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private ListView listview ;
     private NoticeListAdapter adapter;
-    Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림.
 
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
