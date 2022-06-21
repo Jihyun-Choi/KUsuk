@@ -5,49 +5,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 팀플존은 최대 2시간 이용이 가능합니다."
+        android:textColor="#7D0019"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <Button
-        android:id="@+id/floor3"
-        android:layout_width="416dp"
-        android:layout_height="148dp"
-        android:layout_gravity="right"
-        android:layout_margin="20dp"
-        android:background="#00ff0000"
-        android:text="석원경상관 3층"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="264dp"
+        android:layout_height="80dp"
+        android:src="@drawable/kusuklogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="K U S U K"
         android:textColor="@color/black"
-        app:strokeColor="@color/black"
-        app:strokeWidth="5dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="44dp" />
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.00999999" />
 
-    <Button
-        android:id="@+id/floor4"
-        android:layout_width="416dp"
-        android:layout_height="148dp"
-        android:layout_gravity="right"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:text="석원경상관 4층"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="292dp"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/floor3"
-        android:background="#00ff0000"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#E1E1E1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.463">
 
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:background="#E1E1E1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/test"
-        android:layout_width="416dp"
-        android:layout_height="148dp"
-        android:layout_gravity="right"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:text="반납 화면"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="292dp"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/floor4"
-        android:background="#00ff0000"/>
+            <Button
+                android:id="@+id/floor3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/notice_drawable"
+                android:text="석원경상관 3층"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/floor4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/notice_drawable"
+                android:text="석원경상관 4층"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/notice_drawable"
+                android:text="반납"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
