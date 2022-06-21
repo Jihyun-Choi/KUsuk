@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void reservation_floor3_count(){
         int i;
         for(i=1; i<=7; i++) {
@@ -85,7 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                    floor3_count++;
+                    String value = datasnapshot.getValue(String.class);
+                    if (value != null){
+                        floor3_count++;
+                    }
                 }
 
                 @Override
@@ -102,7 +106,10 @@ public class MainActivity extends AppCompatActivity {
             database4.child(table).child("ID").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                    floor4_count++;
+                    String value = datasnapshot.getValue(String.class);
+                    if (value != null){
+                        floor4_count++;
+                    }
                 }
 
                 @Override

@@ -40,8 +40,31 @@ public class reservation_return extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reservation_return);
+        TextView textView = findViewById(R.id.textView);
+        TextView textView2 = findViewById(R.id.textView2);
 
         Button returnbtn = findViewById(R.id.returnbtn);
+
+
+        for(i=1; i<=7; i++) {
+            String table = "table30" + i;
+            database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                    String value = datasnapshot.getValue(String.class);
+                    if (uid.equals(value)) {
+                        textView.setText(table);
+                    }
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
+
         returnbtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -53,11 +76,13 @@ public class reservation_return extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                             String value = datasnapshot.getValue(String.class);
                             if (uid.equals(value)) {
-                                Log.v("equals", "true1");
+                                Log.v("equals", value);
                                 String tableno = "table30" + i;
                                 database3.child(tableno).removeValue();
+
                             }
                         }
+
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
@@ -88,10 +113,8 @@ public class reservation_return extends AppCompatActivity {
 
             }
 
-
-
-
-
         });
+
+
     }
 }

@@ -33,7 +33,9 @@ public class floor3 extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reservation_floor3);
-
+        long now = System.currentTimeMillis();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
+        String getNow = dateFormat.format(now);
 
         table301 = (Button) findViewById(R.id.table301);
         table302 = (Button) findViewById(R.id.table302);
@@ -78,10 +80,12 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
+                        String getNow = dateFormat.format(now);
 
+                        database.child("table301").child("starttime").setValue(getNow );
                         database.child("table301").child("finishtime").setValue(getTime);
                         database.child("table301").child("ID").setValue(uid);
                     }
@@ -111,10 +115,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table302").child("starttime").setValue(getNow );
                         database.child("table302").child("finishtime").setValue(getTime);
                         database.child("table302").child("ID").setValue(uid);
                     }
@@ -145,10 +149,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table303").child("starttime").setValue(getNow );
                         database.child("table303").child("finishtime").setValue(getTime);
                         database.child("table303").child("ID").setValue(uid);
                     }
@@ -178,10 +182,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table304").child("starttime").setValue(getNow );
                         database.child("table304").child("finishtime").setValue(getTime);
                         database.child("table304").child("ID").setValue(uid);
                     }
@@ -211,10 +215,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table305").child("starttime").setValue(getNow );
                         database.child("table305").child("finishtime").setValue(getTime);
                         database.child("table305").child("ID").setValue(uid);
                     }
@@ -245,10 +249,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table306").child("starttime").setValue(getNow );
                         database.child("table306").child("finishtime").setValue(getTime);
                         database.child("table306").child("ID").setValue(uid);
                     }
@@ -278,10 +282,10 @@ public class floor3 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         long now = System.currentTimeMillis();
-                        Date date = new Date(now+7000000);
+                        Date date = new Date(now+7200000);
                         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                         String getTime = dateFormat.format(date);
-
+                        database.child("table307").child("starttime").setValue(getNow );
                         database.child("table307").child("finishtime").setValue(getTime);
                         database.child("table307").child("ID").setValue(uid);
                     }
