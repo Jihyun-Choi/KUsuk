@@ -20,11 +20,8 @@ import java.util.ArrayList;
 public class reservation_return extends AppCompatActivity {
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference database = mRootRef.child("reservation").child("3floor");
-
     FirebaseDatabase mDatabase;
     DatabaseReference dataRef;
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reservation_return);
@@ -36,8 +33,6 @@ public class reservation_return extends AppCompatActivity {
             public void onClick(View view) {
                 database.child("table301").removeValue();
             }
-
-
         });
     }
 }
