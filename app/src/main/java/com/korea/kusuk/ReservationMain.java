@@ -48,14 +48,12 @@ public class ReservationMain extends AppCompatActivity {
         int i;
         for(i=1; i<=7; i++) {
             String table = "table30"+i;
-            Task<DataSnapshot> id = database3.child(table).child("ID").get();
             database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                     String value = datasnapshot.getValue(String.class);
                     if(uid.equals(value))
                     {
-                        Log.v("equals","true");
                         Intent intent = new Intent(getApplicationContext(), reservation_return.class);
                         startActivity(intent);
                     }
@@ -66,7 +64,23 @@ public class ReservationMain extends AppCompatActivity {
 
                 }
             });
+            String table2 = "table40"+i;
+            database4.child(table2).child("ID").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                    String value = datasnapshot.getValue(String.class);
+                    if(uid.equals(value))
+                    {
+                        Intent intent = new Intent(getApplicationContext(), reservation_return.class);
+                        startActivity(intent);
+                    }
+                }
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
 
 
