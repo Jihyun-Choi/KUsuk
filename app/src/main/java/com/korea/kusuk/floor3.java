@@ -2,6 +2,7 @@ package com.korea.kusuk;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,6 +43,27 @@ public class floor3 extends AppCompatActivity {
         table306 = (Button) findViewById(R.id.table306);
         table307 = (Button) findViewById(R.id.table307);
 
+        if (database.child("table301").child("ID").get() != null){
+            table301.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table302").child("ID").get() != null){
+            table302.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table303").child("ID").get() != null){
+            table303.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table304").child("ID").get() != null){
+            table304.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table305").child("ID").get() != null){
+            table305.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table306").child("ID").get() != null){
+            table306.setBackgroundColor(Color.RED);
+        }
+        if (database.child("table307").child("ID").get() != null){
+            table307.setBackgroundColor(Color.RED);
+        }
 
         table301.setOnClickListener(new View.OnClickListener(){
             @Override
