@@ -59,11 +59,10 @@ public class MainActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
         //listview.setOnItemClickListener(listener);
 
-        adapter.addItem("제목1", "날짜1", "내용1");  //(제목 부분, 내용)
-        adapter.addItem("제목2", "날짜2", "내용2");
-        adapter.addItem("제목3", "날짜3", "내용3");
-        adapter.addItem("제목4", "날짜4", "내용4");
-        adapter.addItem("제목5", "날짜5", "내용5");
+        adapter.addItem("KUsuk 서비스 개발자 모집", "2022-06-21", "더나은 서비스를 제공하기 위해 개발자를 모집합니다. 관심있는 분은 아래의 이메일로 지원서를 제출해주세요!");
+        adapter.addItem("KUsuk 업데이트", "2022-06-20", "실시간 잔여좌석을 확인할 수 있도록 업데이트하였습니다.");
+        adapter.addItem("팀플룸 이용시간 변경안내", "2022-05-25", "시험기관으로 인해 석원경상관 팀플룸 이용시간을 9:00~21:00에서 0:00~24:00으로 변경되었음을 안내드립니다.");
+        adapter.addItem("KUsuk", "2022-05-05", "안녕하세요. KUsuk을 개발한 김기환, 이슬, 최지현입니다. KUsuk은 석원경상관 실시간 팀플룸예약 어플리케이션입니다.");
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림.
 
