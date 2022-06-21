@@ -35,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
     TextView floor3_textView;
     TextView floor4_textView;
 
+    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+    DatabaseReference database3 = mRootRef.child("reservation").child("3floor");
+    DatabaseReference database4 = mRootRef.child("reservation").child("4floor");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         floor3_textView = findViewById(R.id.floor3_count);
         floor4_textView = findViewById(R.id.floor4_count);
@@ -57,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
         //listview.setOnItemClickListener(listener);
 
-        adapter.addItem("제목1", "날짜", "내용1");  //(제목 부분, 내용)
-        adapter.addItem("제목1", "날짜", "내용1");
-        adapter.addItem("제목1", "날짜", "내용1");
-        adapter.addItem("제목1", "날짜", "내용1");
-        adapter.addItem("제목1", "날짜", "내용1");
+        adapter.addItem("제목1", "날짜1", "내용1");  //(제목 부분, 내용)
+        adapter.addItem("제목2", "날짜2", "내용2");
+        adapter.addItem("제목3", "날짜3", "내용3");
+        adapter.addItem("제목4", "날짜4", "내용4");
+        adapter.addItem("제목5", "날짜5", "내용5");
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림.
 
@@ -76,13 +78,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reservation_floor3_count(){
-        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference database3 = mRootRef.child("reservation").child("3floor");
-
         int i;
         for(i=1; i<=7; i++) {
             String table = "table30" + i;
             database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
+
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                     floor3_count++;
@@ -96,9 +96,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reservation_floor4_count(){
-        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference database4 = mRootRef.child("reservation").child("4floor");
-
         int i;
         for(i=1; i<=7; i++) {
             String table = "table40" + i;
