@@ -44,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         floor3_textView = findViewById(R.id.floor3_count);
         floor4_textView = findViewById(R.id.floor4_count);
-
-        floor3_count = reservation_floor3_count();
-        floor4_count = reservation_floor4_count();
-
+        reservation_floor3_count();
+        reservation_floor4_count();
         floor3_textView.setText(floor3_count + " / 7");
         floor4_textView.setText(floor4_count + " / 7");
 
@@ -77,36 +75,43 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public int reservation_floor3_count(){
+    public void reservation_floor3_count(){
         DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference database3 = mRootRef.child("reservation").child("3floor");
-        int count = 0;
+
         int i;
         for(i=1; i<=7; i++) {
             String table = "table30" + i;
-            Task<DataSnapshot> id = database3.child(table).child("ID").get();
+            database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                    floor3_count++;
+                }
 
-            if (id != null) {
-                count += 1;
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
         }
-        return count;
     }
 
-    public int reservation_floor4_count(){
+    public void reservation_floor4_count(){
         DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference database4 = mRootRef.child("reservation").child("4floor");
-        int count = 0;
+
         int i;
         for(i=1; i<=7; i++) {
             String table = "table40" + i;
-            Task<DataSnapshot> id = database4.child(table).child("ID").get();
+            database4.child(table).child("ID").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                    floor4_count++;
+                }
 
-            if (id != null) {
-                count += 1;
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
         }
-        return count;
     }
-
 }
