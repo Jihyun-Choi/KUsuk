@@ -51,13 +51,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/floor3_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="2/13"
+                android:text="1/7"
                 android:textColor="#7D0019"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -69,10 +69,9 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text="3층 팀플존"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:text="4층 팀플존"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <View
@@ -89,13 +88,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/floor4_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="3/13"
+                android:text="3/7"
                 android:textColor="#7D0019"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -107,7 +106,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="3층 팀플존"
+                android:text="4층 팀플존"
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>

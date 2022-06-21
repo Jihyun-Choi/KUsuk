@@ -88,7 +88,7 @@ public class ReservationMain extends AppCompatActivity {
             }
         });
         Button returnbtn = (Button) findViewById(R.id.test);
-        returnbtn .setOnClickListener(new View.OnClickListener(){
+        returnbtn. setOnClickListener(new View.OnClickListener(){ // 코드 확인
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), reservation_return.class);
