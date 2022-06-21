@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.00999999" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="500dp"
@@ -53,47 +53,36 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.463">
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="380dp"
-            android:layout_height="300dp"
-            android:background="#E1E1E1"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/floor4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/notice_drawable"
+            android:text="석원경상관 4층"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/floor3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/notice_drawable"
-                android:text="석원경상관 3층"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/floor3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/notice_drawable"
+            android:text="석원경상관 3층"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/floor4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/notice_drawable"
-                android:text="석원경상관 4층"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/notice_drawable"
+            android:text="반납"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/test"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/notice_drawable"
-                android:text="반납"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
