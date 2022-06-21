@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         floor4_textView = findViewById(R.id.floor4_count);
         reservation_floor3_count();
         reservation_floor4_count();
-        floor3_textView.setText(floor3_count + " / 7");
-        floor4_textView.setText(floor4_count + " / 7");
+        floor3_textView.setText('2' + " / 7");
+        floor4_textView.setText('3' + " / 7");
 
         // Adapter 생성
         adapter = new NoticeListAdapter();

@@ -4,9 +4,11 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
@@ -15,8 +17,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -45,27 +49,54 @@ public class floor3 extends AppCompatActivity {
         table306 = (Button) findViewById(R.id.table306);
         table307 = (Button) findViewById(R.id.table307);
 
-        if (database.child("table301").child("ID").get() != null){
-            table301.setBackgroundColor(Color.RED);
+
+        int i;
+        for(i=1; i<=7; i++) {
+            String table = "table30" + i;
+            int finalI = i;
+            database.child(table).child("ID").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                    String value = datasnapshot.getValue(String.class);
+                    String test = "0";
+                    int count = finalI;
+                    if(uid.equals(value)){
+                        if(count==1)table301.setBackgroundColor(Color.RED);
+                        if(count==2)table302.setBackgroundColor(Color.RED);
+                        if(count==3)table303.setBackgroundColor(Color.RED);
+                        if(count==4)table304.setBackgroundColor(Color.RED);
+                        if(count==5)table305.setBackgroundColor(Color.RED);
+                        if(count==6)table306.setBackgroundColor(Color.RED);
+                        if(count==7)table307.setBackgroundColor(Color.RED);
+                    }
+                    else
+                    {
+                        if(count==1)table301.setBackgroundColor(Color.GREEN);
+                        if(count==2)table302.setBackgroundColor(Color.GREEN);
+                        if(count==3)table303.setBackgroundColor(Color.GREEN);
+                        if(count==4)table304.setBackgroundColor(Color.GREEN);
+                        if(count==5)table305.setBackgroundColor(Color.GREEN);
+                        if(count==6)table306.setBackgroundColor(Color.GREEN);
+                        if(count==7)table307.setBackgroundColor(Color.GREEN);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    int count2 = finalI;;
+                    if(count2==1)table301.setBackgroundColor(Color.GREEN);
+                    if(count2==2)table302.setBackgroundColor(Color.GREEN);
+                    if(count2==3)table303.setBackgroundColor(Color.GREEN);
+                    if(count2==4)table304.setBackgroundColor(Color.GREEN);
+                    if(count2==5)table305.setBackgroundColor(Color.GREEN);
+                    if(count2==6)table306.setBackgroundColor(Color.GREEN);
+                    if(count2==7)table307.setBackgroundColor(Color.GREEN);
+
+                }
+            });
         }
-        if (database.child("table302").child("ID").get() != null){
-            table302.setBackgroundColor(Color.RED);
-        }
-        if (database.child("table303").child("ID").get() != null){
-            table303.setBackgroundColor(Color.RED);
-        }
-        if (database.child("table304").child("ID").get() != null){
-            table304.setBackgroundColor(Color.RED);
-        }
-        if (database.child("table305").child("ID").get() != null){
-            table305.setBackgroundColor(Color.RED);
-        }
-        if (database.child("table306").child("ID").get() != null){
-            table306.setBackgroundColor(Color.RED);
-        }
-        if (database.child("table307").child("ID").get() != null){
-            table307.setBackgroundColor(Color.RED);
-        }
+
+
 
         table301.setOnClickListener(new View.OnClickListener(){
             @Override
