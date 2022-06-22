@@ -22,12 +22,9 @@ public class Reservation extends AppCompatActivity {
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference conditionRef = mRootRef.child("3f floor");
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Button name_rule_btn = (Button) findViewById(R.id.floor4);
         name_rule_btn.setOnClickListener(new View.OnClickListener(){
@@ -35,10 +32,7 @@ public class Reservation extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), floor4.class);
                 startActivity(intent);
-
-    }
-
-
+            }
         });
     }
 }

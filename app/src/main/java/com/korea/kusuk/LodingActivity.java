@@ -12,8 +12,7 @@ public class LodingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loding);
-        //로딩화면 시작.
-        Loadingstart();
+        Loadingstart(); //로딩화면 시작
     }
 
     private void Loadingstart(){

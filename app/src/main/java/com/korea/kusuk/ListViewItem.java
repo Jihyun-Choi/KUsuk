@@ -1,7 +1,6 @@
 package com.korea.kusuk;
 
 public class ListViewItem {
-
     private String titleStr ;
     private String dateStr ;
     private String contentStr ;

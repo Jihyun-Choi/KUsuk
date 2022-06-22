@@ -49,7 +49,6 @@ public class floor3 extends AppCompatActivity {
         table306 = (Button) findViewById(R.id.table306);
         table307 = (Button) findViewById(R.id.table307);
 
-
         int i;
         for(i=1; i<=7; i++) {
             String table = "table30" + i;
@@ -69,8 +68,7 @@ public class floor3 extends AppCompatActivity {
                         if(count==6)table306.setBackgroundColor(Color.RED);
                         if(count==7)table307.setBackgroundColor(Color.RED);
                     }
-                    else
-                    {
+                    else {
                         if(count==1)table301.setBackgroundColor(Color.GREEN);
                         if(count==2)table302.setBackgroundColor(Color.GREEN);
                         if(count==3)table303.setBackgroundColor(Color.GREEN);
@@ -91,12 +89,9 @@ public class floor3 extends AppCompatActivity {
                     if(count2==5)table305.setBackgroundColor(Color.GREEN);
                     if(count2==6)table306.setBackgroundColor(Color.GREEN);
                     if(count2==7)table307.setBackgroundColor(Color.GREEN);
-
                 }
             });
         }
-
-
 
         table301.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -128,9 +123,7 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table302.setOnClickListener(new View.OnClickListener(){
@@ -161,11 +154,8 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
-
 
         table303.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -195,9 +185,7 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table304.setOnClickListener(new View.OnClickListener(){
@@ -228,9 +216,7 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table305.setOnClickListener(new View.OnClickListener(){
@@ -261,11 +247,8 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
-
 
         table306.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -295,9 +278,7 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table307.setOnClickListener(new View.OnClickListener(){
@@ -328,9 +309,7 @@ public class floor3 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
     }
 }

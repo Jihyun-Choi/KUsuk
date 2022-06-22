@@ -20,8 +20,7 @@ public class NoticeListAdapter extends BaseAdapter {
     private ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>();
 
     // ListViewAdapter의 생성자
-    public NoticeListAdapter() {
-    }
+    public NoticeListAdapter() {}
 
     // Adapter에 사용되는 데이터의 개수를 리턴
     @Override

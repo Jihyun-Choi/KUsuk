@@ -24,11 +24,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
 public class reservation_return extends AppCompatActivity {
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    FirebaseDatabase mDatabase;
-    DatabaseReference dataRef;
-
     DatabaseReference database3 = mRootRef.child("reservation").child("3floor");
     DatabaseReference database4 = mRootRef.child("reservation").child("4floor");
 
@@ -42,11 +40,9 @@ public class reservation_return extends AppCompatActivity {
         setContentView(R.layout.reservation_return);
         TextView textView = findViewById(R.id.textView);
         TextView textView2 = findViewById(R.id.textView2);
-
         Button returnbtn = findViewById(R.id.returnbtn);
 
-
-        for(i=1; i<=7; i++) {
+        for(i=1; i <= 7; i++) {
             String table = "table30" + i;
             database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -57,16 +53,12 @@ public class reservation_return extends AppCompatActivity {
                     }
                 }
 
-
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
+                public void onCancelled(@NonNull DatabaseError error) {}
             });
         }
 
         returnbtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 for(i=1; i<=7; i++) {
@@ -76,45 +68,34 @@ public class reservation_return extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                             String value = datasnapshot.getValue(String.class);
                             if (uid.equals(value)) {
-                                Log.v("equals", value);
                                 String tableno = "table30" + i;
                                 database3.child(tableno).removeValue();
-
                             }
                         }
 
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
-                            Log.v("equals", "false1");
                         }
                     });
                 }
-                for(i=1; i<=7; i++) {
+                for(i=1; i <= 7; i++) {
                     String table2 = "table40"+i;
                     database4.child(table2).child("ID").addValueEventListener(new ValueEventListener() {
 
                         @Override
                         public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                             String value = datasnapshot.getValue(String.class);
-                            if(uid.equals(value))
-                            {
+                            if(uid.equals(value)) {
                                 database4.child(table2).removeValue();
                             }
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
-                            Log.v("equals","false2");
                         }
                     });
                 }
-
-
             }
-
         });
-
-
     }
 }

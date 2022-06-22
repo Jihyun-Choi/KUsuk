@@ -55,14 +55,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="KUsuk" />
 
             <TextView
                 android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="2"
-                android:text="TextView" />
+                android:text="2022-05-05" />
         </LinearLayout>
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="안녕하세요. KUsuk을 개발한 김기환, 이슬, 최지현입니다. KUsuk은 석원경상관 실시간 팀플룸예약 어플리케이션입니다." />
     </LinearLayout>
 
 

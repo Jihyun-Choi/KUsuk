@@ -25,9 +25,6 @@ public class floor4 extends AppCompatActivity {
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String uid = user.getUid();
 
-
-
-
     private Button table401, table402, table403, table404, table405, table406, table407;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +38,6 @@ public class floor4 extends AppCompatActivity {
         table405 = (Button) findViewById(R.id.table405);
         table406 = (Button) findViewById(R.id.table406);
         table407 = (Button) findViewById(R.id.table407);
-
 
         table401.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -71,9 +67,7 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table402.setOnClickListener(new View.OnClickListener(){
@@ -104,11 +98,8 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
-
 
         table403.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -138,9 +129,7 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table404.setOnClickListener(new View.OnClickListener(){
@@ -171,9 +160,7 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table405.setOnClickListener(new View.OnClickListener(){
@@ -204,11 +191,8 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
-
 
         table406.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -238,9 +222,7 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
 
         table407.setOnClickListener(new View.OnClickListener(){
@@ -271,9 +253,7 @@ public class floor4 extends AppCompatActivity {
                     }
                 });
                 ad.show();
-
             }
-
         });
     }
 }

@@ -76,10 +76,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void reservation_floor3_count(){
         int i;
-        for(i=1; i<=7; i++) {
+        for(i=1; i <= 7; i++) {
             String table = "table30" + i;
             database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
 
@@ -92,8 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
+                public void onCancelled(@NonNull DatabaseError error) {}
             });
         }
     }
@@ -112,8 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
+                public void onCancelled(@NonNull DatabaseError error) {}
             });
         }
     }

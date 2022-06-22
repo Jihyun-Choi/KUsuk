@@ -21,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailView,passwordView;
     Button loginBtnView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
-
             }
         });
-
     }
 }

@@ -46,74 +46,61 @@ public class ReservationMain extends AppCompatActivity {
         setContentView(R.layout.reservationmain);
 
         int i;
-        for(i=1; i<=7; i++) {
+        for(i=1; i <= 7; i++) {
             String table = "table30"+i;
             database3.child(table).child("ID").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                     String value = datasnapshot.getValue(String.class);
-                    if(uid.equals(value))
-                    {
+                    if(uid.equals(value)) {
                         Intent intent = new Intent(getApplicationContext(), reservation_return.class);
                         startActivity(intent);
                     }
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
+                public void onCancelled(@NonNull DatabaseError error) {}
             });
             String table2 = "table40"+i;
             database4.child(table2).child("ID").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                     String value = datasnapshot.getValue(String.class);
-                    if(uid.equals(value))
-                    {
+                    if(uid.equals(value)) {
                         Intent intent = new Intent(getApplicationContext(), reservation_return.class);
                         startActivity(intent);
                     }
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
+                public void onCancelled(@NonNull DatabaseError error) {}
             });
         }
 
-
         Button developer_info_btn = (Button) findViewById(R.id.floor3);
-        developer_info_btn.setOnClickListener(new View.OnClickListener(){
+        developer_info_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), floor3.class);
                 startActivity(intent);
             }
         });
 
         Button name_rule_btn = (Button) findViewById(R.id.floor4);
-        name_rule_btn.setOnClickListener(new View.OnClickListener(){
+        name_rule_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), floor4.class);
                 startActivity(intent);
             }
         });
         Button returnbtn = (Button) findViewById(R.id.test);
-        returnbtn. setOnClickListener(new View.OnClickListener(){ // 코드 확인
+        returnbtn. setOnClickListener(new View.OnClickListener() { // 코드 확인
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), reservation_return.class);
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
     }
 }
