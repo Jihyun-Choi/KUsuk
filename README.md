@@ -59,11 +59,14 @@
 <br />
 
 ## 🗃 UI 구조 개요
- 
+
+<img src="https://user-images.githubusercontent.com/70438098/178293117-60dd7bdc-c8e5-4b86-a40a-74faa84c7234.png" alt="UI_Flow"/>
+
 <br />
 
 ## 💻 데이터베이스 구조
- 
+
+<img src="https://user-images.githubusercontent.com/70438098/178292338-684bd97b-4d17-418f-a881-814a36a0e865.jpg" alt="database_structure" width="600"/>
 
 <br />
 
